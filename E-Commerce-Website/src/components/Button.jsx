@@ -1,8 +1,8 @@
-const Button = ({ children, onClick, paint, size,text }) => {
+const Button = ({ children, onClick, paint, size,text="black" }) => {
   const sizes = {
     sm: "w-12",
     md: "w-24",
-    lg: "w-32",
+    lg: "px-12 py-4",
     xl: "w-44",
     xxl: "w-56",
     xxxl: "px-12 py-4",
@@ -21,7 +21,7 @@ const Button = ({ children, onClick, paint, size,text }) => {
   return (
     <button
       onClick={onClick}
-      className={`h-14 px ${sizes[size]} ${textColor[text]}  rounded-md ${colors[paint]}`}
+      className={`h-14 rounded-md ${sizes[size]} ${textColor[text]} ${colors[paint]}`}
     >
       {children}
     </button>
