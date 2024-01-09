@@ -1,8 +1,10 @@
-
-const RoutePage = ({children}) => {
+const RoutePage = ({ children }) => {
   return (
-    <p><span className="opacity-50">Home / </span> {children}</p>
-  )
-}
+    <p>
+      <span className="opacity-50">Home / </span> 
+      {children}
+    </p>
+  );
+};
 
-export default RoutePage
+export default RoutePage;
