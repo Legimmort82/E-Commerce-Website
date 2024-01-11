@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Page404 from "./pages/Page404";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Page13 from "./pages/Page13";
 import Layout from "./pages/Layout";
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <Page404 />,
+      },
+      {
+        path:"/page13",
+        element:<Page13/>
       },
     ],
   },
