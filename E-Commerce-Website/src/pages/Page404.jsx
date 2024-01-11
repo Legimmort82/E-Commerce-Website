@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import RoutePage from "../components/Route";
+import RoutePage from "../components/RoutePage";
 
 const Page404 = () => {
   return (
