@@ -1,6 +1,6 @@
 import about from "@/assets/icons/about.png"
 import Information from "@/components/Information";
-import RoutePage from "@/components/Route";
+import RoutePage from "@/components/RoutePage";
 import se1 from "@/assets/icons/Services.png"
 import se2 from "@/assets/icons/Services2.png"
 import se3 from "@/assets/icons/Services3.png"

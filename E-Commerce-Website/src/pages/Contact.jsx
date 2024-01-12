@@ -1,12 +1,12 @@
 import phone from "@/assets/icons/icons-phone.png";
 import mail from "@/assets/icons/icons-mail.png";
-import RoutePage from "@/components/Route";
+import RoutePage from "@/components/RoutePage";
 import Button from "@/components/Button";
 const Contact = () => {
   return (
     <div className="pt-20 pb-36 px-32">
       <RoutePage>Contact</RoutePage>
-      <div className="flex gap-[30px]">
+      <div className="flex gap-[30px] items-center">
         <div className="px-9 py-10 w-[340px] bg-white shadow-md mt-20">
           <div className="flex gap-4 items-center mb-6">
             <img src={phone} alt="" />
