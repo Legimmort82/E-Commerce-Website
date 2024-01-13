@@ -4,7 +4,7 @@ const Button = ({ children, onClick, paint, size,text="black" }) => {
     md: "w-24",
     lg: "px-12 py-4",
     xl: "w-44",
-    xxl: "w-56",
+    xxl: "py-4 w-[80%]",
     xxxl: "px-12 py-4",
   };
   const colors = {

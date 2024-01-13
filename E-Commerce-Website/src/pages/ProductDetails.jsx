@@ -7,6 +7,7 @@ import pic3 from "@/assets/icons/image 59.svg";
 import pic4 from "@/assets/icons/image 61.svg";
 import pic5 from "@/assets/icons/image 63.svg";
 import star from "@/assets/icons/Vector.svg";
+import pic6 from "@/assets/icons/Vector.svg";
 import pic7 from "@/assets/icons/Vector (1).svg";
 import Rout3 from "@/components/Rout3";
 import Money from "@/components/Money";
@@ -173,8 +174,5 @@ const ProductDetails = () => {
           />
         </div>
       </div>
-    </div>
-  );
-};
 
 export default ProductDetails;

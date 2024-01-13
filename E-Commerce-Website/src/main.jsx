@@ -6,6 +6,8 @@ import Page404 from "./pages/Page404";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Layout from "./pages/Layout";
+import SingUp from "./pages/SingUp";
+import SignIn from "./pages/SignIn";
 import ProductDetails from "./pages/ProductDetails";
 
 const router = createBrowserRouter([
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path:"/product",
         element:<ProductDetails/>
+      },
+      {
+        path:"/signUp",
+        element:<SingUp/>
+      },
+      {
+        path:"/signIn",
+        element:<SignIn/>
       },
     ],
   },
