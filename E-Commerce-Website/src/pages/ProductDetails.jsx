@@ -17,7 +17,7 @@ import Delivery from "@/components/Delivery";
 import deliveryone from "@/assets/icons/icon-delivery.svg";
 import Iconreturn from "@/assets/icons/Icon-return.svg";
 
-const Page13 = () => {
+const ProductDetails = () => {
   return (
     <div className="w-[1170px] my-0 mx-auto">
       
@@ -114,4 +114,4 @@ const Page13 = () => {
   );
 };
 
-export default Page13;
+export default ProductDetails;

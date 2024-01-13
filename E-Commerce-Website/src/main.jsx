@@ -5,8 +5,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Page404 from "./pages/Page404";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import Page13 from "./pages/Page13";
 import Layout from "./pages/Layout";
+import SingUp from "./pages/SingUp";
+import SignIn from "./pages/SignIn";
+import ProductDetails from "./pages/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +28,16 @@ const router = createBrowserRouter([
         element: <Page404 />,
       },
       {
-        path:"/page13",
-        element:<Page13/>
+        path:"/product",
+        element:<ProductDetails/>
+      },
+      {
+        path:"/signUp",
+        element:<SingUp/>
+      },
+      {
+        path:"/signIn",
+        element:<SignIn/>
       },
     ],
   },
