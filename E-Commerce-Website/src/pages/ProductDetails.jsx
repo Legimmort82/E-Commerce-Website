@@ -42,7 +42,7 @@ const ProductDetails = () => {
           <h1 className="text-[24px] font-semibold	mb-[16px]">
             Havic HV G-92 Gamepad
           </h1>
-          <div>
+          <div className="flex gap-2">
             <Pic image={star} />
             <Pic image={star} />
             <Pic image={star} />

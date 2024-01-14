@@ -2,8 +2,39 @@ import phone from "@/assets/icons/icons-phone.png";
 import mail from "@/assets/icons/icons-mail.png";
 import RoutePage from "@/components/PageRoutes/RoutePage";
 import Button from "@/components/Button";
+import { useState } from "react";
+import axios from "axios";
 
 const Contact = () => {
+  const [firstName, setFirstName] = useState("");
+  const [mail, setMail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  
+  const handleName = (e) => {
+    setFirstName(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setMail(e.target.value);
+  };
+  const handlePhone = (e) => {
+    setPhone(e.target.value);
+  };
+  const handleMessage = (e) => {
+    setMessage(e.target.value);
+  };
+  const SendComment = () => {
+    const data = {
+      Name: firstName,
+      Email: mail,
+      Phone: phone,
+      Message: message,
+    };
+    axios.post(
+      "https://65a3cc63a54d8e805ed40200.mockapi.io/shop/Comments",
+      data
+    );
+  };
   return (
     <div className="pt-20 pb-36 px-32">
       <RoutePage>Contact</RoutePage>
@@ -34,28 +65,36 @@ const Contact = () => {
               type="text"
               placeholder="Your Name"
               className="w-1/3 h-[50px] rounded-sm pl-4 bg-[#F5F5F5]"
+              value={firstName}
+              onChange={handleName}
             />
             <input
               type="text"
               placeholder="Your Email"
               className="w-1/3 h-[50px] rounded-sm pl-4 bg-[#F5F5F5]"
+              value={mail}
+              onChange={handleEmail}
             />
             <input
               type="text"
               placeholder="Your Phone"
               className="w-1/3 h-[50px] rounded-sm pl-4 bg-[#F5F5F5]"
+              value={phone}
+              onChange={handlePhone}
             />
           </div>
           <textarea
             className="w-full bg-[#F5F5F5] h-1/2 my-8 pl-4 pt-3 rounded-sm"
             placeholder="Your Massage"
+            value={message}
+            onChange={handleMessage}
             name=""
             id=""
             cols="30"
             rows="10"
           ></textarea>
           <div className="flex justify-end">
-            <Button paint="red" text="white" size="lg">
+            <Button paint="red" text="white" size="lg" onClick={SendComment}>
               Send Massage
             </Button>
           </div>
