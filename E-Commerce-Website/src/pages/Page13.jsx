@@ -1,5 +1,5 @@
 import Pic from "@/components/Pic";
-import Route1 from "@/components/Route1";
+import ProductRoute from "@/components/PageRoutes/ProductRoute";
 import React from "react";
 import pic1 from "@/assets/icons/image 57.svg";
 import pic2 from "@/assets/icons/image 58.svg";
@@ -8,7 +8,6 @@ import pic4 from "@/assets/icons/image 61.svg";
 import pic5 from "@/assets/icons/image 63.svg";
 import star from "@/assets/icons/Vector.svg";
 import pic7 from "@/assets/icons/Vector (1).svg";
-import Rout3 from "@/components/Rout3";
 import Money from "@/components/Money";
 import minus from "@/assets/icons/icon-minus.svg";
 import plus from "@/assets/icons/icon-plus.svg";
@@ -18,13 +17,14 @@ import deliveryone from "@/assets/icons/icon-delivery.svg";
 import Iconreturn from "@/assets/icons/Icon-return.svg";
 import Products from "@/components/Products";
 import game from "@/assets/icons/g92-2-500x500 1.svg";
-import keyboard from '@/assets/icons/ak-900-01-500x500 1.svg'
-import monitor from '@/assets/icons/g27cq4-500x500 1.svg'
-import microphone from '@/assets/icons/gammaxx-l240-argb-1-500x500 1.svg'
+import keyboard from "@/assets/icons/ak-900-01-500x500 1.svg";
+import monitor from "@/assets/icons/g27cq4-500x500 1.svg";
+import microphone from "@/assets/icons/gammaxx-l240-argb-1-500x500 1.svg";
+
 const Page13 = () => {
   return (
     <div className="w-[1170px] my-0 mx-auto flex flex-col gap-[50px]">
-      <Route1>Havic HV G-92 Gamepad</Route1>
+      <ProductRoute>Havic HV G-92 Gamepad</ProductRoute>
 
       <div className="flex items-end gap-[70px]">
         <div className="flex items-start ">
@@ -42,13 +42,13 @@ const Page13 = () => {
           <h1 className="text-[24px] font-semibold	mb-[16px]">
             Havic HV G-92 Gamepad
           </h1>
-          <Rout3>
+          <div>
             <Pic image={star} />
             <Pic image={star} />
             <Pic image={star} />
             <Pic image={star} />
             <Pic image={star} />
-          </Rout3>
+          </div>
           <Money cost="192.00" />
           <h2 className="w-[373px] h-[63px] text-[14px] font-normal leading-[21px]">
             PlayStation 5 Controller Skin High quality vinyl with air channel
@@ -138,38 +138,36 @@ const Page13 = () => {
             percent="-40%"
           />
           <Products
-          text="AK-900 Wired Keyboard"
-          cost1="960"
-          cost2="1160"
-          image1={star}
-          image2={pic7}
-          image3={keyboard}
-          number="75"
-          ok={true}
-          percent="-35%"
+            text="AK-900 Wired Keyboard"
+            cost1="960"
+            cost2="1160"
+            image1={star}
+            image2={pic7}
+            image3={keyboard}
+            number="75"
+            ok={true}
+            percent="-35%"
           />
           <Products
-          text="IPS LCD Gaming Monitor"
-          cost1="370"
-          cost2="400"
-          image1={star}
-          image2={pic7}
-          image3={monitor}
-          number="99"
-          ok={true}
-          percent="-25%3"
+            text="IPS LCD Gaming Monitor"
+            cost1="370"
+            cost2="400"
+            image1={star}
+            image2={pic7}
+            image3={monitor}
+            number="99"
+            ok={true}
+            percent="-25%3"
           />
-          <Products 
-          text="IPS LCD Gaming Monitor"
-          cost1="160"
-          cost2="170"
-          image1={star}
-          image2={pic7}
-          image3={microphone}
-          number="65"
-          ok={false}
-
-          
+          <Products
+            text="IPS LCD Gaming Monitor"
+            cost1="160"
+            cost2="170"
+            image1={star}
+            image2={pic7}
+            image3={microphone}
+            number="65"
+            ok={false}
           />
         </div>
       </div>

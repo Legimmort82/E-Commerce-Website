@@ -3,23 +3,31 @@ import love from "@/assets/icons/Wishlist.svg";
 import eye from "@/assets/icons/Fill Eye.svg";
 import Pic from "./Pic";
 
+const Products = ({
+  text,
+  cost1,
+  cost2,
+  image1,
+  image3,
+  number,
+  ok,
+  percent,
+}) => {
+  const [show, setShow] = useState(ok);
 
-
-const Products = ({text,cost1,cost2,image1,image3,number,ok,percent}) => {
-  const [show,setShow]=useState(ok)
-  
   return (
     <div className="w-[270px] h-[355px] border-[1px]  flex flex-col gap-4">
       <div className=" relative w-[270px] h-[250px] bg-gray-100">
-        
-        {show && <button className="w-[55px] h-[26px] absolute top-3 left-3	 bg-red-400 rounded-[4px] text-[12px] text-white font-normal">
+        {show && (
+          <button className="w-[55px] h-[26px] absolute top-3 left-3	 bg-red-400 rounded-[4px] text-[12px] text-white font-normal">
             {percent}
-          </button> }  
-          <div className="absolute right-3 top-3">
-            <img src={love} alt="pic" />
-            <img src={eye} alt="pic" />
-          </div>
-        
+          </button>
+        )}
+        <div className="absolute right-3 top-3">
+          <img src={love} alt="pic" />
+          <img src={eye} alt="pic" />
+        </div>
+
         <div className=" absolute top-[50px] left-[49px] right-[49px] ">
           <img src={image3} alt="pic" className="my-0 mx-auto" />
         </div>

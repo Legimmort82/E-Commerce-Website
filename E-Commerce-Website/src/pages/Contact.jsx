@@ -1,7 +1,8 @@
 import phone from "@/assets/icons/icons-phone.png";
 import mail from "@/assets/icons/icons-mail.png";
-import RoutePage from "@/components/RoutePage";
+import RoutePage from "@/components/PageRoutes/RoutePage";
 import Button from "@/components/Button";
+
 const Contact = () => {
   return (
     <div className="pt-20 pb-36 px-32">

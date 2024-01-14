@@ -1,4 +1,3 @@
-import React from "react";
 import send from "@/assets/icons/icon-send.svg";
 import copy from "@/assets/icons/icon-copyright.svg";
 
@@ -88,7 +87,9 @@ const Footer = () => {
         </div>
         <div className="my-0 mx-auto flex pb-[24px]">
           <img className="w-[15px] pr-[3px]" src={copy} alt="pic" />
-          <h2 className="tex-[12px]">Copyright Rimel 2022. All right reserved</h2>
+          <h2 className="tex-[12px]">
+            Copyright Rimel 2022. All right reserved
+          </h2>
         </div>
       </div>
     </>

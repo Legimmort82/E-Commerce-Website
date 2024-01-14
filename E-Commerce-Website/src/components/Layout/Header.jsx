@@ -1,8 +1,8 @@
 import React from "react";
-import searchPicture from "../assets/icons/Component 2.svg";
-import love from "../assets/icons/Wishlist.svg";
-import user from "../assets/icons/user.svg";
-import buy from "../assets/icons/Cart1 with buy.svg";
+import searchPicture from "@/assets/icons/Component 2.svg";
+import love from "@/assets/icons/Wishlist.svg";
+import user from "@/assets/icons/user.svg";
+import buy from "@/assets/icons/Cart1 with buy.svg";
 import { Link } from "react-router-dom";
 
 const Header = () => {
