@@ -10,6 +10,7 @@ import SingUp from "./pages/SingUp";
 import SignIn from "./pages/SignIn";
 import ProductDetails from "./pages/ProductDetails";
 import WishList from "./pages/WishList";
+import Acount from "./pages/Acount";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         path:"/wishlist",
         element:<WishList/>
       },
+      {
+        path:"/account",
+        element:<Acount/>
+      }
     ],
   },
 ]);
