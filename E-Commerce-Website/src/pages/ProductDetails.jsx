@@ -21,7 +21,7 @@ import game from "@/assets/icons/g92-2-500x500 1.svg";
 import keyboard from '@/assets/icons/ak-900-01-500x500 1.svg'
 import monitor from '@/assets/icons/g27cq4-500x500 1.svg'
 import microphone from '@/assets/icons/gammaxx-l240-argb-1-500x500 1.svg'
-const Page13 = () => {
+const ProductDetails = () => {
   return (
     <div className="w-[1170px] my-0 mx-auto flex flex-col gap-[50px]">
       <Route1>Havic HV G-92 Gamepad</Route1>
@@ -177,4 +177,4 @@ const Page13 = () => {
   );
 };
 
-export default Page13;
+export default ProductDetails;
