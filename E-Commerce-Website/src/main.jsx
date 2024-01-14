@@ -9,6 +9,7 @@ import Layout from "./pages/Layout";
 import SingUp from "./pages/SingUp";
 import SignIn from "./pages/SignIn";
 import ProductDetails from "./pages/ProductDetails";
+import WishList from "./pages/WishList";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path:"/signIn",
         element:<SignIn/>
+      },
+      {
+        path:"/wishlist",
+        element:<WishList/>
       },
     ],
   },

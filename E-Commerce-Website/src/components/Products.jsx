@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import love from "@/assets/icons/Wishlist.svg";
 import eye from "@/assets/icons/Fill Eye.svg";
-
 import Pic from "./Pic";
 
 
 
-const Products = ({text,cost1,cost2,image1,image2,image3,number,ok,percent}) => {
+const Products = ({text,cost1,cost2,image1,image3,number,ok,percent}) => {
   const [show,setShow]=useState(ok)
   
   return (
