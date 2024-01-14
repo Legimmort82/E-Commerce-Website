@@ -2,6 +2,18 @@ import signUp from "@/assets/icons/login.png";
 import Button from "@/components/Button";
 import { Link } from "react-router-dom";
 const SingUp = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
   return (
     <div className="flex gap-[129px] pt-[60px] pb-[140px] items-center">
       <img src={signUp} alt="" className="w-[700px] h-[500px]" />
@@ -13,16 +25,22 @@ const SingUp = () => {
             type="text"
             placeholder="Name"
             className="w-[300px] border-b-2 py-2 outline-none px-1"
+            value={name}
+            onChange={handleName}
           />
           <input
             type="text"
             placeholder="Email or Phone Number"
             className="w-[300px] border-b-2 py-2 outline-none px-1"
+            value={username}
+            onChange={handleUsername}
           />
           <input
             type="text"
             placeholder="Password"
             className="w-[300px] border-b-2 py-2 outline-none px-1"
+            value={password}
+            onChange={handlePassword}
           />
         </div>
         <div className="w-full flex justify-center">
