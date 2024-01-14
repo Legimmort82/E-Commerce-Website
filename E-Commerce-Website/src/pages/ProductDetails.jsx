@@ -19,9 +19,9 @@ import deliveryone from "@/assets/icons/icon-delivery.svg";
 import Iconreturn from "@/assets/icons/Icon-return.svg";
 import Products from "@/components/Products";
 import game from "@/assets/icons/g92-2-500x500 1.svg";
-import keyboard from '@/assets/icons/ak-900-01-500x500 1.svg'
-import monitor from '@/assets/icons/g27cq4-500x500 1.svg'
-import microphone from '@/assets/icons/gammaxx-l240-argb-1-500x500 1.svg'
+import keyboard from "@/assets/icons/ak-900-01-500x500 1.svg";
+import monitor from "@/assets/icons/g27cq4-500x500 1.svg";
+import microphone from "@/assets/icons/gammaxx-l240-argb-1-500x500 1.svg";
 const ProductDetails = () => {
   return (
     <div className="w-[1170px] my-0 mx-auto flex flex-col gap-[50px]">
@@ -139,40 +139,41 @@ const ProductDetails = () => {
             percent="-40%"
           />
           <Products
-          text="AK-900 Wired Keyboard"
-          cost1="960"
-          cost2="1160"
-          image1={star}
-          image2={pic7}
-          image3={keyboard}
-          number="75"
-          ok={true}
-          percent="-35%"
+            text="AK-900 Wired Keyboard"
+            cost1="960"
+            cost2="1160"
+            image1={star}
+            image2={pic7}
+            image3={keyboard}
+            number="75"
+            ok={true}
+            percent="-35%"
           />
           <Products
-          text="IPS LCD Gaming Monitor"
-          cost1="370"
-          cost2="400"
-          image1={star}
-          image2={pic7}
-          image3={monitor}
-          number="99"
-          ok={true}
-          percent="-25%"
+            text="IPS LCD Gaming Monitor"
+            cost1="370"
+            cost2="400"
+            image1={star}
+            image2={pic7}
+            image3={monitor}
+            number="99"
+            ok={true}
+            percent="-25%"
           />
-          <Products 
-          text="IPS LCD Gaming Monitor"
-          cost1="160"
-          cost2="170"
-          image1={star}
-          image2={pic7}
-          image3={microphone}
-          number="65"
-          ok={false}
-
-          
+          <Products
+            text="IPS LCD Gaming Monitor"
+            cost1="160"
+            cost2="170"
+            image1={star}
+            image2={pic7}
+            image3={microphone}
+            number="65"
+            ok={false}
           />
         </div>
       </div>
+    </div>
+  );
+};
 
 export default ProductDetails;
