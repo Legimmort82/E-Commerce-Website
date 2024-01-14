@@ -2,7 +2,7 @@ const Button = ({ children, onClick, paint, size,text="black" }) => {
   const sizes = {
     sm: "w-12",
     md: "w-24",
-    lg: "px-12 py-4",
+    lg: "px-12 py-4 border-[1px] border-black",
     xl: "w-44",
     xxl: "py-4 w-[80%]",
     xxxl: "px-12 py-4",
@@ -17,7 +17,7 @@ const Button = ({ children, onClick, paint, size,text="black" }) => {
   };
   const textColor = {
     white: "text-white font-medium",
-    black: "text-black",
+    black: "text-black font-medium",
   };
   return (
     <button
