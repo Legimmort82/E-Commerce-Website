@@ -1,4 +1,4 @@
-const Button = ({ children, onClick, paint, size,text="black" }) => {
+const Button = ({ children, onClick, paint, size, text = "black" }) => {
   const sizes = {
     sm: "w-12",
     md: "w-24",
@@ -13,7 +13,7 @@ const Button = ({ children, onClick, paint, size,text="black" }) => {
     yellow: "bg-yellow-500",
     blue: "bg-blue-500",
     pink: "bg-pink-500",
-    white:"bg-white-500"
+    white: "bg-white-500",
   };
   const textColor = {
     white: "text-white font-medium",

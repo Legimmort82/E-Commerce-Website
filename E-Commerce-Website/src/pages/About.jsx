@@ -1,14 +1,15 @@
 import about from "@/assets/icons/about.png";
 import Information from "@/components/Information";
-import RoutePage from "@/components/RoutePage";
+import RoutePage from "@/components/PageRoutes/RoutePage";
 import se1 from "@/assets/icons/Services.png";
 import se2 from "@/assets/icons/Services2.png";
 import se3 from "@/assets/icons/Services3.png";
 import se4 from "@/assets/icons/Services4.png";
 import Guys from "@/components/guys";
 import guy1 from "@/assets/icons/Frame 874.svg";
-import guy2 from '@/assets/icons/image 51.svg'
-import guy3 from '@/assets/icons/image 47.svg'
+import guy2 from "@/assets/icons/image 51.svg";
+import guy3 from "@/assets/icons/image 47.svg";
+
 const About = () => {
   return (
     <div className="px-32 pt-20 flex flex-col gap-10">
@@ -51,9 +52,9 @@ const About = () => {
         />
       </div>
       <div className="flex gap-[30px]">
-        <Guys image={guy1} name="Tom Cruise" work="Founder & Chairman"/>
+        <Guys image={guy1} name="Tom Cruise" work="Founder & Chairman" />
         <Guys image={guy2} name="Emma Watson" work="Managing Director" />
-        <Guys image={guy3} name="Will Smith" work="Product Designer"/>
+        <Guys image={guy3} name="Will Smith" work="Product Designer" />
       </div>
     </div>
   );

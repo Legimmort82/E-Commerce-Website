@@ -1,4 +1,3 @@
-import React from "react";
 import Pic from "./Pic";
 
 const Delivery = ({ image, text1, text2 }) => {
