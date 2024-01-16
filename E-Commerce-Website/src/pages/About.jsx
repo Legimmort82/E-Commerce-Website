@@ -5,10 +5,11 @@ import se1 from "@/assets/icons/Services.png";
 import se2 from "@/assets/icons/Services2.png";
 import se3 from "@/assets/icons/Services3.png";
 import se4 from "@/assets/icons/Services4.png";
-import Guys from "@/components/guys";
+import Guys from "@/components/Guys";
 import guy1 from "@/assets/icons/Frame 874.svg";
 import guy2 from "@/assets/icons/image 51.svg";
 import guy3 from "@/assets/icons/image 47.svg";
+
 
 const About = () => {
   return (
