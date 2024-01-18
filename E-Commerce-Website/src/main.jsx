@@ -10,10 +10,7 @@ import SingUp from "./pages/SingUp";
 import SignIn from "./pages/SignIn";
 import ProductDetails from "./pages/ProductDetails";
 import WishList from "./pages/WishList";
-<<<<<<< Updated upstream
-=======
 import Account from "./pages/Account";
->>>>>>> Stashed changes
 
 const router = createBrowserRouter([
   {
@@ -52,7 +49,6 @@ const router = createBrowserRouter([
         path: "*",
         element: <Page404 />,
       },
-<<<<<<< Updated upstream
       {
         path:"/product",
         element:<ProductDetails/>
@@ -69,8 +65,6 @@ const router = createBrowserRouter([
         path:"/wishlist",
         element:<WishList/>
       },
-=======
->>>>>>> Stashed changes
     ],
   },
 ]);

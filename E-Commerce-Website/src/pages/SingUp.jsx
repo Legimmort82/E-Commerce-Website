@@ -1,5 +1,6 @@
 import signUp from "@/assets/icons/login.png";
 import Button from "@/components/Button";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 const SingUp = () => {
   const [username, setUsername] = useState("");

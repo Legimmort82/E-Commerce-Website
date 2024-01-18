@@ -11,7 +11,7 @@ const Header = () => {
       <div className="w-full  px-[135px] mt-10 flex items-center h-[38px] rounded-sm overflow-hidden	">
         <div>
           <p className="m-0 text-black text-[24px] not-italic	font-bold leading-6	">
-            Exclusive
+            ShoppingWithLove
           </p>
         </div>
         <div className="ml-[70px] mr-[30px]">
