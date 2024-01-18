@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div className="w-[1170px]  mx-auto mt-10 flex items-center h-[38px] rounded-sm overflow-hidden	">
+      <div className="w-full  px-[135px] mt-10 flex items-center h-[38px] rounded-sm overflow-hidden	">
         <div>
           <p className="m-0 text-black text-[24px] not-italic	font-bold leading-6	">
             ShoppingWithLove
           </p>
         </div>
-        <div className="ml-[190px] mr-[148px]">
-          <ul className="m-0 flex items-center	gap-[48px] list-none w-[367px]	">
+        <div className="ml-[70px] mr-[30px]">
+          <ul className="m-0 flex items-center	gap-8 list-none w-[367px]	">
             <Link to="/">
               <li className="w-[48px] h-[24px]">Home</li>
             </Link>
@@ -25,7 +25,9 @@ const Header = () => {
             <Link to="/about">
               <li className="w-[48px] h-[24px]">About</li>
             </Link>
-            <li className="w-[61px] h-[24px]">Sign Up</li>
+            <Link to="/signUp">
+              <li className="w-[61px] h-[24px]">Sign Up</li>
+            </Link>
           </ul>
         </div>
         <div className="flex  h-[38px] items-center">

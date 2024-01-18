@@ -4,9 +4,9 @@ import copy from "@/assets/icons/icon-copyright.svg";
 const Footer = () => {
   return (
     <>
-      <div className="flex flex-col	gap-[60px] h-[440px] text-white	bg-black">
-        <div className="w-[1170px] my-0 mx-auto flex pt-[80px] justify-between	items-start gap-[87px]">
-          <div>
+      <div className="flex flex-col px-[135px]	gap-[60px] h-[440px] text-white	bg-black">
+        <div className="w-full my-0 mx-auto flex pt-[80px] justify-between	items-start gap-[30px]">
+          <div className="flex flex-col gap-3">
             <h1 className="text-[16px] not-italic	font-bold	leading-[24px]">
               Exclusive
             </h1>
@@ -25,7 +25,7 @@ const Footer = () => {
               <img className="pr-[3px]" src={send} alt="pic" />
             </div>
           </div>
-          <div>
+          <div className="flex flex-col gap-3">
             <h1 className="text-[16px] not-italic	font-bold	leading-[24px]">
               Support
             </h1>
@@ -39,7 +39,7 @@ const Footer = () => {
               +88015-88888-9999
             </h2>
           </div>
-          <div>
+          <div className="flex flex-col gap-3">
             <h1 className="text-[16px] not-italic	font-bold	leading-[24px]">
               Account
             </h1>
@@ -59,7 +59,7 @@ const Footer = () => {
               Shop
             </h2>
           </div>
-          <div>
+          <div className="flex flex-col gap-3">
             <h1 className="text-[16px] not-italic	font-bold	leading-[24px]">
               Quick Link
             </h1>
@@ -76,7 +76,7 @@ const Footer = () => {
               Contact
             </h2>
           </div>
-          <div>
+          <div className="flex flex-col gap-3">
             <h1 className="text-[16px] not-italic	font-bold	leading-[24px]">
               Download App
             </h1>
