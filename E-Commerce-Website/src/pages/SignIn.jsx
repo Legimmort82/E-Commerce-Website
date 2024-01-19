@@ -13,8 +13,8 @@ const SignIn = () => {
     setPassword(e.target.value);
   };
   return (
-    <div className="flex gap-[129px] pt-[60px] pb-[140px] items-center">
-      <img src={signIn} alt="" className="w-[700px] h-[500px]" />
+    <div className="flex justify-center gap-8 pt-[60px] pb-[140px] items-center">
+      <img src={signIn} alt="" className="w-1/2 h-[500px]" />
       <div>
         <p className="text-3xl font-medium mb-6">Log in to Exclusive</p>
         <p className="mb-12">Enter your details below</p>

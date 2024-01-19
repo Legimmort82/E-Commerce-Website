@@ -4,8 +4,8 @@ import copy from "@/assets/icons/icon-copyright.svg";
 const Footer = () => {
   return (
     <>
-      <div className="flex flex-col px-[135px]	gap-[60px] h-[440px] text-white	bg-black">
-        <div className="w-full my-0 mx-auto flex pt-[80px] justify-between	items-start gap-[30px]">
+      <div className="flex flex-col w-full justify-center items-center	gap-[60px] h-[440px] text-white	bg-black">
+        <div className="w-full flex pt-[80px] justify-center	items-start gap-[87px]">
           <div className="flex flex-col gap-3">
             <h1 className="text-[16px] not-italic	font-bold	leading-[24px]">
               Exclusive

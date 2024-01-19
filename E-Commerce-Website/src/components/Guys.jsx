@@ -5,7 +5,7 @@ import linkdein from "@/assets/icons/Icon-Linkedin.svg";
 const Guys = ({ name, work, image }) => {
   return (
     <div className="w-[370px] h-[520px]  flex flex-col gap-8 rounded-[4px]">
-      <div className=" flex items-center justify-center bg-slate-300">
+      <div className=" flex items-center justify-center">
         <img className="w-[236px] h-[350px]" src={image} alt="pic" />
       </div>
 

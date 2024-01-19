@@ -3,8 +3,8 @@ import React from "react";
 
 const Account = () => {
   return (
-    <div className="px-[135px]">
-      <div className="flex justify-between py-10">
+    <div className="flex flex-col items-center">
+      <div className="flex w-full justify-center gap-6 py-10">
         <RoutePage>My Acount</RoutePage>
         <p>
           Welcome! <span className="text-red-600">Md Rimel</span>
@@ -62,7 +62,6 @@ const Account = () => {
         </div>
           </div>
         </div>
-        
       </div>
     </div>
   );

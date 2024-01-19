@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div className="w-full  px-[135px] mt-10 flex items-center h-[38px] rounded-sm overflow-hidden	">
+      <div className="w-full mt-10 flex items-center justify-center h-[38px] rounded-sm overflow-hidden	">
         <div>
           <p className="m-0 text-black text-[24px] not-italic	font-bold leading-6	">
             ShoppingWithLove
