@@ -16,8 +16,8 @@ const Products = ({
   const [show, setShow] = useState(ok);
 
   return (
-    <div className="w-[270px] h-[355px] border-[1px]  flex flex-col gap-4">
-      <div className=" relative w-[270px] h-[250px] bg-gray-100">
+    <div className="w-[220px] h-[355px] border-[1px]  flex flex-col gap-4">
+      <div className=" relative w-[220px] h-[250px] bg-gray-100">
         {show && (
           <button className="w-[55px] h-[26px] absolute top-3 left-3	 bg-red-400 rounded-[4px] text-[12px] text-white font-normal">
             {percent}
