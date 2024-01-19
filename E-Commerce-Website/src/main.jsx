@@ -11,12 +11,17 @@ import SignIn from "./pages/SignIn";
 import ProductDetails from "./pages/ProductDetails";
 import WishList from "./pages/WishList";
 import Account from "./pages/Account";
+import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
       {
         path: "/contact",
         element: <Contact />,
