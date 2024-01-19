@@ -13,11 +13,13 @@ import truck from "@/assets/icons/truck.png";
 
 const About = () => {
   return (
-    <div className="px-[135px] pt-20 pb-[140px] flex flex-col gap-10">
+    <div className="pt-20 pb-[140px] px-8 flex flex-col justify-center items-center gap-10">
       <RoutePage>About</RoutePage>
-      <div className="flex items-center gap-[75px] mt-[42px]">
-        <div className="w-[525px]">
-          <h1 className="font-semibold text-[54px] mb-10">Our Story</h1>
+      <div className="flex items-center w-full justify-center gap-6 sm:max-md:flex sm:max-md:flex-col md:max-lg:flex md:max-lg:flex-col mt-[42px]">
+        <div className="w-1/3 md:max-lg:w-3/5 flex flex-col md:max-lg:items-center">
+          <h1 className="font-semibold text-[54px] mb-10 self-center sm:max-lg:text-[36px]">
+            Our Story
+          </h1>
           <p className="mb-6 text-justify	">
             Launced in 2015, Exclusive is South Asia’s premier online shopping
             makterplace with an active presense in Bangladesh. Supported by wide
@@ -31,41 +33,41 @@ const About = () => {
             ranging from consumer.
           </p>
         </div>
-        <img src={about} alt="" className="w-[600px] h-[500px]" />
+        <img src={about} alt="" className="w-1/2 md:max-lg:w-3/5 h-full" />
       </div>
-      <div className="flex gap-[30px]">
-        <Information
-          image={se1}
-          text="Sallers active our site"
-          number="10.5"
-          font="32px"
-        />
-        <Information
-          image={se2}
-          color="red"
-          text="Mopnthly Produduct Sale"
-          number="33k"
-          font="32px"
-        />
-        <Information
-          image={se3}
-          text="Customer active in our site"
-          number="45.5k"
-          font="32px"
-        />
-        <Information
-          image={se4}
-          text="Anual gross sale in our site"
-          number="25k"
-          font="32px"
-        />
+      <div className="flex w-full justify-between flex-wrap">
+          <Information
+            image={se1}
+            text="Sallers active our site"
+            number="10.5"
+            font="32px"
+          />
+          <Information
+            image={se2}
+            color="red"
+            text="Mopnthly Produduct Sale"
+            number="33k"
+            font="32px"
+          />
+          <Information
+            image={se3}
+            text="Customer active in our site"
+            number="45.5k"
+            font="32px"
+          />
+          <Information
+            image={se4}
+            text="Anual gross sale in our site"
+            number="25k"
+            font="32px"
+          />
       </div>
-      <div className="flex gap-[30px]">
+      <div className="flex justify-between w-full sm:max-lg:flex sm:max-lg:flex-col sm:max-lg:items-center">
         <Guys image={guy3} name="Tom Cruise" work="Founder & Chairman" />
         <Guys image={guy2} name="Emma Watson" work="Managing Director" />
         <Guys image={guy1} name="Will Smith" work="Product Designer" />
       </div>
-      <div className="flex gap-[88px] w-full justify-center">
+      <div className="flex w-full justify-between sm:max-lg:flex sm:max-lg:flex-col sm:max-lg:items-center">
         <Information
           image={truck}
           number="FREE AND FAST DELIVERY"
