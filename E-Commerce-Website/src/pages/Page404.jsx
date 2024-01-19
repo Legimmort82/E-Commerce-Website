@@ -3,7 +3,7 @@ import RoutePage from "../components/PageRoutes/RoutePage";
 
 const Page404 = () => {
   return (
-    <div className="pt-20 pb-36 px-32">
+    <div className="pt-20 pb-36 px-[135px]">
       <RoutePage>404 Error</RoutePage>
       <div className="flex flex-col items-center gap-10 mt-36 font-medium">
         <p className="text-8xl">404 Not Found</p>

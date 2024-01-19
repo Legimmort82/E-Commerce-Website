@@ -1,5 +1,5 @@
-import phone from "@/assets/icons/icons-phone.png";
-import mail from "@/assets/icons/icons-mail.png";
+import Phone from "@/assets/icons/icons-phone.png";
+import Mail from "@/assets/icons/icons-mail.png";
 import RoutePage from "@/components/PageRoutes/RoutePage";
 import Button from "@/components/Button";
 import { useState } from "react";
@@ -36,12 +36,12 @@ const Contact = () => {
     );
   };
   return (
-    <div className="pt-20 pb-36 px-32">
+    <div className="pt-20 pb-36 px-[135px]">
       <RoutePage>Contact</RoutePage>
       <div className="flex gap-[30px] items-center">
-        <div className="px-9 py-10 w-[340px] bg-white shadow-md mt-20">
+        <div className="px-[35px] pt-10 pb-[51px] bg-white shadow-md mt-20">
           <div className="flex gap-4 items-center mb-6">
-            <img src={phone} alt="" />
+            <img src={Phone} alt="" />
             <p className="font-medium">Call To Us</p>
           </div>
           <p className="mb-4 text-[14px]">
@@ -50,7 +50,7 @@ const Contact = () => {
           <p className="text-[14px]">Phone: +8801611112222</p>
           <div className="w-full h-[1px] bg-black opacity-50 my-8"></div>
           <div className="flex gap-4 items-center mb-6">
-            <img src={mail} alt="" />
+            <img src={Mail} alt="" />
             <p className="font-medium">Write To US</p>
           </div>
           <p className="mb-4 text-[14px]">
@@ -59,7 +59,7 @@ const Contact = () => {
           <p className="mb-4 text-[14px]">Emails: customer@exclusive.com</p>
           <p className="text-[14px]">Emails: support@exclusive.com</p>
         </div>
-        <div className="w-[800px] h-[457px] bg-white shadow-md mt-20 px-8 py-10">
+        <div className="bg-white shadow-md px-8 py-10 mt-20">
           <div className="flex gap-4">
             <input
               type="text"
@@ -84,7 +84,7 @@ const Contact = () => {
             />
           </div>
           <textarea
-            className="w-full bg-[#F5F5F5] h-1/2 my-8 pl-4 pt-3 rounded-sm"
+            className="w-full bg-[#F5F5F5] h-[207px] my-8 pl-4 pt-3 rounded-sm"
             placeholder="Your Massage"
             value={message}
             onChange={handleMessage}
@@ -94,9 +94,9 @@ const Contact = () => {
             rows="10"
           ></textarea>
           <div className="flex justify-end">
-            <Button paint="red" text="white" size="lg" onClick={SendComment}>
+            <button className="px-12 py-4 bg-red-500 rounded" onClick={SendComment}>
               Send Massage
-            </Button>
+            </button>
           </div>
         </div>
       </div>
