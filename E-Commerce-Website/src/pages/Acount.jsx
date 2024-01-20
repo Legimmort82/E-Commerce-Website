@@ -1,15 +1,10 @@
 import RoutePage from "@/components/PageRoutes/RoutePage";
 import React from "react";
 
-const Acount = () => {
+const Account = () => {
   return (
-<<<<<<< Updated upstream:E-Commerce-Website/src/pages/Acount.jsx
-    <div className="px-[135px]">
-      <div className="flex justify-between py-10">
-=======
     <div className="flex flex-col w-full items-center">
       <div className="flex w-full justify-center gap-6 py-10">
->>>>>>> Stashed changes:E-Commerce-Website/src/pages/Account.jsx
         <RoutePage>My Acount</RoutePage>
         <p>
           Welcome! <span className="text-red-600">Md Rimel</span>
@@ -73,4 +68,4 @@ const Acount = () => {
   );
 };
 
-export default Acount;
+export default Account;
