@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div className="w-full mt-10 flex items-center justify-center h-[38px] rounded-sm overflow-hidden	">
+      <div className="w-full mt-10 flex items-center px-6 justify-between rounded-sm">
         <div>
-          <p className="m-0 text-black text-[24px] not-italic	font-bold leading-6	">
+          <p className="m-0 text-black text-[24px] font-bold">
             ShoppingWithLove
           </p>
         </div>
-        <div className="ml-[70px] mr-[30px]">
-          <ul className="m-0 flex items-center	gap-8 list-none w-[367px]	">
+        <div>
+          <ul className="flex items-center	gap-6 list-none w-full	">
             <Link to="/">
               <li className="w-[48px] h-[24px]">Home</li>
             </Link>
@@ -30,26 +30,18 @@ const Header = () => {
             </Link>
           </ul>
         </div>
-        <div className="flex  h-[38px] items-center">
-          <div className="w-[243px] h-[38px] bg-slate-300 rounded-[5px] flex justify-center	items-center p-0">
+        <div className="flex items-center">
+          <div className="w-ful rounded-[5px] flex justify-between items-center">
             <input
-              className="w-full h-[18px] py-[7px] pl-[20px]  bg-slate-300 border-0	outline-0	"
+              className="w-full py-2 pl-2 bg-slate-300 rounded border-0	outline-0	"
               type="search"
-              placeholder="What are you looking for?"
+              placeholder="looking for?"
             />
-            <img
-              className="w-[24px] h-[24px] mr-[2px]"
-              src={searchPicture}
-              alt="pic"
-            />
+            <img className="w-[24px] h-[32px] mr-2" src={searchPicture} alt="pic" />
+            <img className="w-[32px] h-[32px]" src={love} alt="pic" />
+            <img className="w-[32px] h-[32px]" src={buy} alt="pic" />
+            <img className="w-[32px] h-[32px]" src={user} alt="pic" />
           </div>
-          <img
-            className="w-[32px] h-[32px] ml-[24px] mr-[16px] "
-            src={love}
-            alt="pic"
-          />
-          <img className="w-[32px] h-[32px]" src={buy} alt="pic" />
-          <img className="w-[32px] h-[32px] ml-4" src={user} alt="pic" />
         </div>
       </div>
       <div className="w-full h-[1px] mt-4 bg-black bg-opacity-50"></div>

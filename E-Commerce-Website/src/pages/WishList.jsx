@@ -10,7 +10,7 @@ const WishList = () => {
         <p className="text-[20px]">Wishlist(4)</p>
         <Button size="lg">Move All To Bag</Button>
       </div>
-      <div className="flex gap-[50px] w-full">
+      <div className="flex justify-between sm:max-lg:flex-wrap sm:max-lg:justify-center sm:max-lg:gap-12 w-full">
         <div>
           <Products
             image3={game}
@@ -67,7 +67,7 @@ const WishList = () => {
         </div>
         <Button size="lg">See All</Button>
       </div>
-      <div className="flex gap-[50px] w-full">
+      <div className="flex justify-between sm:max-lg:flex-wrap sm:max-lg:justify-center sm:max-lg:gap-12 w-full">
         <div>
           <Products
             image3={game}
