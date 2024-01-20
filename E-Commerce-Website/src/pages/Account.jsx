@@ -5,7 +5,7 @@ const Account = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex w-full justify-center gap-6 py-10">
-        <RoutePage>My Acount</RoutePage>
+        <RoutePage>My Account</RoutePage>
         <p>
           Welcome! <span className="text-red-600">Md Rimel</span>
         </p>
@@ -31,29 +31,29 @@ const Account = () => {
             <div className="flex gap-[50px]">
               <div className="flex flex-col">
                 <label className="text-[16px] font-normal">First Name</label>
-                <input type="text" placeholder="MD" className="bg-gray-300 w-[330px] h-[50px] rounded pl-[16px] py-[13px]"  />
+                <input type="text" placeholder="MD" className="bg-gray-300 w-full h-[50px] rounded pl-[16px] py-[13px]"  />
               </div>
               <div className="flex flex-col">
                 <label className="text-[16px] font-normal">Last Name</label>
-                <input type="text" placeholder="Rimel"  className="bg-gray-300 w-[330px] h-[50px] rounded pl-[16px] py-[13px]"/>
+                <input type="text" placeholder="Rimel"  className="bg-gray-300 w-full h-[50px] rounded pl-[16px] py-[13px]"/>
               </div>
             </div>
             <div className="flex gap-[50px]">
               <div className="flex flex-col ">
                 <label className="text-[16px] font-normal">Email</label>
-                <input type="text" placeholder="rimel1111@gmail.com" className="bg-gray-300 w-[330px] h-[50px] rounded pl-[16px] py-[13px]" />
+                <input type="text" placeholder="rimel1111@gmail.com" className="bg-gray-300 w-full h-[50px] rounded pl-[16px] py-[13px]" />
               </div>
               <div>
                 <label className="flex flex-col">Address</label>
-                <input type="text" placeholder="Kingston, 5236, United State" className="bg-gray-300 w-[330px] h-[50px] rounded pl-[16px] py-[13px]" />
+                <input type="text" placeholder="Kingston, 5236, United State" className="bg-gray-300 w-full h-[50px] rounded pl-[16px] py-[13px]" />
               </div>
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-[16px] font-normal">Password Changes</label>
               <div className="flex flex-col gap-[16px] ">
-              <input type="text" placeholder="Current Password"  className="bg-gray-300 w-[710px] h-[50px] rounded pl-[16px] py-[13px]"/>
-              <input type="text" placeholder="New Password"  className="bg-gray-300 w-[710px] h-[50px] rounded pl-[16px] py-[13px]"/>
-              <input type="text" placeholder="Confirm New Password" className="bg-gray-300 w-[710px] h-[50px] rounded pl-[16px] py-[13px]" />
+              <input type="text" placeholder="Current Password"  className="bg-gray-300 w-full h-[50px] rounded pl-[16px] py-[13px]"/>
+              <input type="text" placeholder="New Password"  className="bg-gray-300 w-full h-[50px] rounded pl-[16px] py-[13px]"/>
+              <input type="text" placeholder="Confirm New Password" className="bg-gray-300 w-full h-[50px] rounded pl-[16px] py-[13px]" />
               </div>
             </div>
             <div className="flex flex-row-reverse gap-8	">

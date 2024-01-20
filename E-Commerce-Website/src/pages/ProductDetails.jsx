@@ -13,8 +13,8 @@ import minus from "@/assets/icons/icon-minus.svg";
 import plus from "@/assets/icons/icon-plus.svg";
 import love from "@/assets/icons/Wishlist.svg";
 import Delivery from "@/components/Delivery";
-import deliveryone from "@/assets/icons/icon-delivery.svg";
-import Iconreturn from "@/assets/icons/Icon-return.svg";
+import deliveryOne from "@/assets/icons/icon-delivery.svg";
+import IconReturn from "@/assets/icons/Icon-return.svg";
 import Products from "@/components/Products";
 import game from "@/assets/icons/g92-2-500x500 1.svg";
 import keyboard from "@/assets/icons/ak-900-01-500x500 1.svg";
@@ -23,22 +23,21 @@ import microphone from "@/assets/icons/gammaxx-l240-argb-1-500x500 1.svg";
 
 const ProductDetails = () => {
   return (
-    <div className="w-[1170px] my-0 mx-auto flex flex-col gap-[50px]">
+    <div className="w-full flex flex-col px-6 items-center gap-[50px]">
       <ProductRoute>Havic HV G-92 Gamepad</ProductRoute>
-
-      <div className="flex items-end gap-[70px]">
-        <div className="flex items-start ">
-          <div className="flex flex-col gap-4">
+      <div className="flex items-end  gap-4 w-full">
+        <div className="flex w-full basis-1/2 items-start ">
+          {/* <div className="flex flex-col gap-4">
             <Pic image={pic1} size="sm" sizee="md" color="grey" />
             <Pic image={pic2} size="sm" sizee="md" color="grey" />
             <Pic image={pic3} size="sm" sizee="md" color="grey" />
             <Pic image={pic4} size="sm" sizee="md" color="grey" />
-          </div>
-          <div className="pl-[30px]">
+          </div> */}
+          <div className="pl-[30px] w-full">
             <Pic image={pic5} size="md" color="grey" />
           </div>
         </div>
-        <div className="w-[399px]">
+        <div className="w-full basis-1/2">
           <h1 className="text-[24px] font-semibold	mb-[16px]">
             Havic HV G-92 Gamepad
           </h1>
@@ -50,12 +49,12 @@ const ProductDetails = () => {
             <Pic image={star} />
           </div>
           <Money cost="192.00" />
-          <h2 className="w-[373px] h-[63px] text-[14px] font-normal leading-[21px]">
+          <h2 className="w-full h-[63px] text-justify text-[14px] font-normal leading-[21px]">
             PlayStation 5 Controller Skin High quality vinyl with air channel
             adhesive for easy bubble free install & mess free removal Pressure
             sensitive.
           </h2>
-          <hr className="my-[24px]  border-black" />
+          <hr className="my-[24px] border-black" />
           <div className="flex mb-[24px]">
             <label className="text-[20px] font-normal leading-[20px] h-[20px]">
               Color:
@@ -74,7 +73,7 @@ const ProductDetails = () => {
               <button className="border-black border-[1px] text-[14px] font-medium w-[32px] h-[32px] flex items-center justify-center rounded-md">
                 S
               </button>
-              <button className="border-blackborder-[1px] text-[14px] font-medium w-[32px] h-[32px] flex items-center justify-center bg-red-600 text-white rounded-md">
+              <button className="border-black border-[1px] text-[14px] font-medium w-[32px] h-[32px] flex items-center justify-center bg-red-600 text-white rounded-md">
                 M
               </button>
               <button className="border-black border-[1px] text-[14px] font-medium w-[32px] h-[32px] flex items-center justify-center rounded-md">
@@ -104,28 +103,27 @@ const ProductDetails = () => {
               <img className="w-[32px] h-[32px] " src={love} alt="pic" />
             </button>
           </div>
-          <div className="w-[399px] h-[180px] border-[1px] border-black flex flex-col rounded-sm">
+          <div className="w-full h-[180px] border-[1px] border-black flex flex-col rounded-sm">
             <Delivery
-              image={deliveryone}
+              image={deliveryOne}
               text1="Free Delivery"
               text2="Enter your postal code for Delivery Availability"
             />
-            <hr className="w-[398px] h-[1px]   border-black" />
+            <hr className="w-full h-[1px]   border-black" />
             <Delivery
-              image={Iconreturn}
+              image={IconReturn}
               text1="Return Delivery"
               text2="Free 30 Days Delivery Returns. Details"
             />
           </div>
         </div>
       </div>
-
-      <div className="flex flex-col gap-[60px] pb-[50px]">
+      <div className="flex flex-col w-full gap-[60px] pb-[50px]">
         <div className="flex items-center gap-3">
           <div className="w-[20px] h-[40px] bg-red-500"></div>
           <p className="text-[16px] font-semibold">Related Item</p>
         </div>
-        <div className="flex gap-[30px]">
+        <div className="flex w-full justify-between sm:max-lg:flex-wrap sm:max-lg:justify-center  sm:max-lg:gap-12">
           <Products
             text="HAVIT HV-G92 Gamepad"
             cost1="120"

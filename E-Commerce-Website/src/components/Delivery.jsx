@@ -2,7 +2,7 @@ import Pic from "./Pic";
 
 const Delivery = ({ image, text1, text2 }) => {
   return (
-    <div className="flex  w-[332px] h-[50px] ml-[16px] mr-[51px] my-[20px] items-center 	">
+    <div className="flex  w-full h-[50px] ml-[16px] mr-[51px] my-[20px] items-center 	">
       <Pic image={image} sizee="sm" />
       <div className="ml-[16px]">
         <h1 className="text-[16px] font-medium mb-[8px]	">{text1}</h1>

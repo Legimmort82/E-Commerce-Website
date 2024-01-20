@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <>
       <div className="flex flex-col w-full justify-center items-center	gap-[60px] h-[440px] text-white	bg-black">
-        <div className="w-full flex pt-[80px] justify-center	items-start gap-[87px]">
-          <div className="flex flex-col gap-3">
-            <h1 className="text-[16px] not-italic	font-bold	leading-[24px]">
-              Exclusive
+        <div className="w-full flex pt-4 justify-between px-6 items-start">
+          {/* <div className="flex flex-col gap-3">
+            <h1 className=" not-italic	font-bold	leading-[24px]">
+              ShoppingWithLove
             </h1>
             <h2 className="text-[12px] not-italic font-medium leading-[28px]">
               Subscribe
@@ -24,7 +24,7 @@ const Footer = () => {
               />
               <img className="pr-[3px]" src={send} alt="pic" />
             </div>
-          </div>
+          </div> */}
           <div className="flex flex-col gap-3">
             <h1 className="text-[16px] not-italic	font-bold	leading-[24px]">
               Support
@@ -33,7 +33,7 @@ const Footer = () => {
               111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
             </h2>
             <h2 className="text-[12px] not-italic font-medium leading-[28px]">
-              exclusive@gmail.com
+              ShoppingWithLove@gmail.com
             </h2>
             <h2 className="text-[12px] not-italic font-medium leading-[28px]">
               +88015-88888-9999
@@ -76,14 +76,14 @@ const Footer = () => {
               Contact
             </h2>
           </div>
-          <div className="flex flex-col gap-3">
+          {/* <div className="flex flex-col gap-3">
             <h1 className="text-[16px] not-italic	font-bold	leading-[24px]">
               Download App
             </h1>
             <h2 className="text-[12px] not-italic font-medium leading-[28px]">
               Save $3 with App New User Only
             </h2>
-          </div>
+          </div> */}
         </div>
         <div className="my-0 mx-auto flex pb-[24px]">
           <img className="w-[15px] pr-[3px]" src={copy} alt="pic" />
