@@ -14,7 +14,7 @@ import Account from "./pages/Account";
 import HomePage from "./pages/HomePage";
 import CheckOut from "./pages/CheckOut";
 import Cart from "./pages/Cart";
-
+import { CommentProvider } from "./Providers/CommentProvider";
 
 const router = createBrowserRouter([
   {
@@ -58,28 +58,28 @@ const router = createBrowserRouter([
         element: <Page404 />,
       },
       {
-        path:"/product",
-        element:<ProductDetails/>
+        path: "/product",
+        element: <ProductDetails />,
       },
       {
-        path:"/signUp",
-        element:<SingUp/>
+        path: "/signUp",
+        element: <SingUp />,
       },
       {
-        path:"/signIn",
-        element:<SignIn/>
+        path: "/signIn",
+        element: <SignIn />,
       },
       {
-        path:"/checkout",
-        element:<CheckOut/>
+        path: "/checkout",
+        element: <CheckOut />,
       },
       {
-        path:"/cart",
-        element:<Cart/>
+        path: "/cart",
+        element: <Cart />,
       },
       {
-        path:"/wishlist",
-        element:<WishList/>
+        path: "/wishlist",
+        element: <WishList />,
       },
     ],
   },
@@ -87,6 +87,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CommentProvider>
+      <RouterProvider router={router} />
+    </CommentProvider>
   </React.StrictMode>
 );
