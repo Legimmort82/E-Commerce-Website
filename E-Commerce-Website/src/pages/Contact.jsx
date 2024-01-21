@@ -1,15 +1,16 @@
 import Phone from "@/assets/icons/icons-phone.png";
 import Mail from "@/assets/icons/icons-mail.png";
 import RoutePage from "@/components/PageRoutes/RoutePage";
-import { useState } from "react";
-import axios from "axios";
+import { useContext, useState } from "react";
+import { commentContext } from "@/Providers/CommentProvider";
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("");
   const [mail, setMail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  
+  const { comments, setComments } = useContext(commentContext);
+
   const handleName = (e) => {
     setFirstName(e.target.value);
   };
@@ -22,18 +23,19 @@ const Contact = () => {
   const handleMessage = (e) => {
     setMessage(e.target.value);
   };
-  const SendComment = () => {
-    const data = {
-      Name: firstName,
-      Email: mail,
-      Phone: phone,
-      Message: message,
-    };
-    axios.post(
-      "https://65a3cc63a54d8e805ed40200.mockapi.io/shop/Comments",
-      data
-    );
+
+  const sendComment = () => {
+    setComments([...comments, data]);
+    alert("done");
   };
+  
+  const data = {
+    Name: firstName,
+    Email: mail,
+    Phone: phone,
+    Message: message,
+  };
+
   return (
     <div className="pt-20 pb-36 flex flex-col justify-center items-center">
       <RoutePage>Contact</RoutePage>
@@ -71,7 +73,7 @@ const Contact = () => {
               type="text"
               placeholder="Your Email"
               className="w-1/3 sm:max-md:w-full h-[50px] rounded-sm pl-4 bg-[#F5F5F5]"
-              value={mail} 
+              value={mail}
               onChange={handleEmail}
             />
             <input
@@ -93,7 +95,10 @@ const Contact = () => {
             rows="10"
           ></textarea>
           <div className="flex justify-end">
-            <button className="px-12 py-4 bg-red-500 rounded" onClick={SendComment}>
+            <button
+              className="px-12 py-4 bg-red-500 rounded"
+              onClick={() => sendComment()}
+            >
               Send Massage
             </button>
           </div>
