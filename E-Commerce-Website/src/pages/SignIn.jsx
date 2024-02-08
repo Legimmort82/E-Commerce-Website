@@ -1,16 +1,23 @@
 import signIn from "@/assets/icons/login.png";
 import Button from "@/components/Button";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/Firebase/Firebase";
 
 const SignIn = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleUsername = (e) => {
-    setUsername(e.target.value);
+  const navigate = useNavigate();
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
+  };
+  const signInUser = () => {
+    signInWithEmailAndPassword(auth, email, password);
+    navigate("/");
   };
   return (
     <div className="flex justify-center gap-8 pt-[60px] pb-[140px] items-center">
@@ -23,8 +30,8 @@ const SignIn = () => {
             type="text"
             placeholder="Email or Phone Number"
             className="w-[300px] border-b-2 py-2 outline-none px-1"
-            value={username}
-            onChange={handleUsername}
+            value={email}
+            onChange={handleEmail}
           />
           <input
             type="text"
@@ -35,7 +42,7 @@ const SignIn = () => {
           />
         </div>
         <div className="w-full flex justify-center">
-          <Button paint="red" size="xxl">
+          <Button paint="red" size="xxl" onClick={signInUser}>
             Login
           </Button>
         </div>

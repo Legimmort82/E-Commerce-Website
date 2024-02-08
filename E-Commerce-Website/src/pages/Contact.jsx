@@ -3,6 +3,8 @@ import Mail from "@/assets/icons/icons-mail.png";
 import RoutePage from "@/components/PageRoutes/RoutePage";
 import { useContext, useState } from "react";
 import { commentContext } from "@/Providers/CommentProvider";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "@/Firebase/Firebase";
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("");
@@ -24,18 +26,17 @@ const Contact = () => {
     setMessage(e.target.value);
   };
 
-  const sendComment = () => {
+  const sendComment = async () => {
+    const data = await addDoc(collection(db, "comments"), {
+      name: firstName,
+      massage: message,
+      phone: phone,
+      email: mail,
+    });
     setComments([...comments, data]);
     alert("done");
   };
   
-  const data = {
-    Name: firstName,
-    Email: mail,
-    Phone: phone,
-    Message: message,
-  };
-
   return (
     <div className="pt-20 pb-36 flex flex-col justify-center items-center">
       <RoutePage>Contact</RoutePage>
@@ -97,7 +98,7 @@ const Contact = () => {
           <div className="flex justify-end">
             <button
               className="px-12 py-4 bg-red-500 rounded"
-              onClick={() => sendComment()}
+              onClick={sendComment}
             >
               Send Massage
             </button>

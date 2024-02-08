@@ -1,19 +1,26 @@
 import signUp from "@/assets/icons/login.png";
 import Button from "@/components/Button";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/Firebase/Firebase";
 const SingUp = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const handleUsername = (e) => {
-    setUsername(e.target.value);
+  const navigate = useNavigate();
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
   const handleName = (e) => {
     setName(e.target.value);
+  };
+  const createAccount = () => {
+    createUserWithEmailAndPassword(auth, email, password);
+    navigate("/signIn");
   };
   return (
     <div className="flex justify-center gap-8 pt-[60px] pb-[140px] items-center">
@@ -33,8 +40,8 @@ const SingUp = () => {
             type="text"
             placeholder="Email or Phone Number"
             className="w-[300px] border-b-2 py-2 outline-none px-1"
-            value={username}
-            onChange={handleUsername}
+            value={email}
+            onChange={handleEmail}
           />
           <input
             type="text"
@@ -45,7 +52,7 @@ const SingUp = () => {
           />
         </div>
         <div className="w-full flex justify-center">
-          <Button paint="red" size="xxl">
+          <Button paint="red" size="xxl" onClick={createAccount}>
             Create Account
           </Button>
         </div>
