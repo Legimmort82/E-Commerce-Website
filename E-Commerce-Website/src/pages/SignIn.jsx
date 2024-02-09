@@ -1,24 +1,47 @@
 import signIn from "@/assets/icons/login.png";
 import Button from "@/components/Button";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/Firebase/Firebase";
+import { authContext } from "@/Providers/AuthProvider";
 
 const SignIn = () => {
+  const { setLoggedIn } = useContext(authContext);
+
   const [email, setEmail] = useState("");
+
   const [password, setPassword] = useState("");
+
+  const [errors, setErrors] = useState(false);
+
   const navigate = useNavigate();
+
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
+
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
+
   const signInUser = () => {
-    signInWithEmailAndPassword(auth, email, password);
-    navigate("/");
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        setLoggedIn(true);
+        navigate("/");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setErrors(errorMessage);
+        // ..
+      });
   };
+
   return (
     <div className="flex justify-center gap-8 pt-[60px] pb-[140px] items-center">
       <img src={signIn} alt="" className="w-1/2 h-[500px]" />
@@ -40,6 +63,7 @@ const SignIn = () => {
             value={password}
             onChange={handlePassword}
           />
+          <div className="text-red-600 text-xs">{errors}</div>
         </div>
         <div className="w-full flex justify-center">
           <Button paint="red" size="xxl" onClick={signInUser}>

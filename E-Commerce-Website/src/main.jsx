@@ -15,6 +15,7 @@ import HomePage from "./pages/HomePage";
 import CheckOut from "./pages/CheckOut";
 import Cart from "./pages/Cart";
 import { CommentProvider } from "./Providers/CommentProvider";
+import { AuthProvider } from "./Providers/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -87,8 +88,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <CommentProvider>
-      <RouterProvider router={router} />
-    </CommentProvider>
+    <AuthProvider>
+      <CommentProvider>
+        <RouterProvider router={router} />
+      </CommentProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
