@@ -1,7 +1,7 @@
 const Button = ({ children, onClick, paint, size, text = "black" }) => {
   const sizes = {
-    sm: "w-12",
-    md: "w-24",
+    sm: "px-4 h-10",
+    md: "px-8",
     lg: "px-12 py-4",
     xl: "w-44",
     xxl: "py-4 w-[80%]",

@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import searchPicture from "@/assets/icons/Component 2.svg";
 import love from "@/assets/icons/Wishlist.svg";
 import user from "@/assets/icons/user.svg";
 import buy from "@/assets/icons/Cart1 with buy.svg";
 import { Link } from "react-router-dom";
+import { authContext } from "@/Providers/AuthProvider";
+import { signOut } from "firebase/auth";
+import { auth } from "@/Firebase/Firebase";
+
+
+import Button from "../Button";
 
 const Header = () => {
+  const { LoggedIn } = useContext(authContext);
+
+  const { setLoggedIn } = useContext(authContext);
+
+  const signUserOut = () => {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        setLoggedIn(false);
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
   return (
     <>
       <div className="w-full mt-10 flex items-center px-6 justify-between rounded-sm">
@@ -37,10 +57,19 @@ const Header = () => {
               type="search"
               placeholder="looking for?"
             />
-            <img className="w-[24px] h-[32px] mr-2" src={searchPicture} alt="pic" />
+            <img
+              className="w-[24px] h-[32px] mr-2"
+              src={searchPicture}
+              alt="pic"
+            />
             <img className="w-[32px] h-[32px]" src={love} alt="pic" />
             <img className="w-[32px] h-[32px]" src={buy} alt="pic" />
-            <img className="w-[32px] h-[32px]" src={user} alt="pic" />
+            {LoggedIn && (
+              <img className="w-[32px] h-[32px]" src={user} alt="pic" />
+            )}
+            <Button size="sm" paint="red" onClick={signUserOut}>
+              Logout
+            </Button>
           </div>
         </div>
       </div>
