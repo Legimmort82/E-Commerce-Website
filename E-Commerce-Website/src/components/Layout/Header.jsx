@@ -8,17 +8,17 @@ import { authContext } from "@/Providers/AuthProvider";
 import { signOut } from "firebase/auth";
 import { auth } from "@/Firebase/Firebase";
 
-
 import Button from "../Button";
 
 const Header = () => {
-  const { LoggedIn } = useContext(authContext);
+  const { LoggedIn, logout } = useContext(authContext);
 
   const { setLoggedIn } = useContext(authContext);
 
   const signUserOut = () => {
     signOut(auth)
       .then(() => {
+        logout();
         // Sign-out successful.
         setLoggedIn(false);
       })
@@ -62,7 +62,9 @@ const Header = () => {
               src={searchPicture}
               alt="pic"
             />
-            <img className="w-[32px] h-[32px]" src={love} alt="pic" />
+            <Link to="/wishlist">
+              <img className="w-[32px] h-[32px]" src={love} alt="pic" />
+            </Link>
             <img className="w-[32px] h-[32px]" src={buy} alt="pic" />
             {LoggedIn && (
               <img className="w-[32px] h-[32px]" src={user} alt="pic" />

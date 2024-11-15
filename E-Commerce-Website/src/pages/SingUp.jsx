@@ -7,7 +7,7 @@ import { auth } from "@/Firebase/Firebase";
 import { authContext } from "@/Providers/AuthProvider";
 
 const SingUp = () => {
-  const { setLoggedIn } = useContext(authContext);
+  const { saveAccessToken } = useContext(authContext);
 
   const [email, setEmail] = useState("");
 
@@ -29,8 +29,8 @@ const SingUp = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed up
-        const user = userCredential.user;
-        setLoggedIn(true);
+        const user = userCredential.user.accessToken;
+        saveAccessToken(user);
         navigate("/");
         console.log(user);
         // ...
